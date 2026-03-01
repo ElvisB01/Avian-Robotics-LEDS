@@ -1,0 +1,19 @@
+# WPILib / GradleRIO
+/build/
+/out/
+/bin/
+/.gradle/
+/.apt_generated/
+/.apt_generated_tests/
+/.classpath
+/.project
+/.settings/
+/.vscode/
+/.wpilib/ws_rio.json
+*.log
+*.iml
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
