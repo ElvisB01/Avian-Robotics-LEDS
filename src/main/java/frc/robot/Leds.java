@@ -131,6 +131,18 @@ public class Leds {
     );
   }
 
+  private void setBlueGoldFire() {
+    // Blue & Gold fire effect
+    candle.setControl(
+        new FireAnimation(EXT_START, EXT_END)
+            .withSlot(0)
+            .withCooling(0.3)     // lower = more intense flame
+            .withSparking(0.6)    // how often yellow pops
+            .withSpeed(0.7)       // animation speed
+            .withColor(new RGBWColor(0, 0, 255, 0)) // base blue
+    );
+  }
+
   /**
    * Call every robotPeriodic. Feed your real booleans in.
    *
@@ -186,7 +198,7 @@ public class Leds {
       return;
     }
 
-    // 8) Idle
-    setExternalSolid(VIOLET);
+    // 8) Idle - Blue/Yellow "fire"
+    setBlueGoldFire();
   }
 }
