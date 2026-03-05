@@ -15,22 +15,20 @@ import com.ctre.phoenix6.signals.AnimationDirectionValue;
 import com.ctre.phoenix6.signals.RGBWColor;
 import com.ctre.phoenix6.signals.StatusLedWhenActiveValue;
 import com.ctre.phoenix6.signals.StripTypeValue;
+import com.ctre.phoenix6.controls.FireAnimation;
 
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Timer;
 
 /**
  * CANdle LED manager (Phoenix 6).
- *
- * External strip is assumed to start at index 8 (0-7 are onboard CANdle LEDs).
- * Update STRIP_LED_COUNT when you know your strip length.
  */
 public class Leds {
   // Update later when you know it
-  private static final int STRIP_LED_COUNT = 60;
+  private static final int STRIP_LED_COUNT = 89;
 
   // CANdle
-  private static final int CANDLE_ID = 1;
+  private static final int CANDLE_ID = 30;
   private final CANdle candle = new CANdle(CANDLE_ID, CANBus.roboRIO());
 
   // Indices: 0-7 onboard, 8+ external
